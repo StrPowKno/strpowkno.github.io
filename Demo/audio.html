@@ -1,0 +1,55 @@
+<!--Example of Audio in HTML-->
+
+<audio controls autoplay loop muted>
+    <source src="../assets/audios/cut.mp3" >
+</audio>
+
+<!--The tags avaiable for audio are
+
+    <audio controls> to show the audio controls
+
+    <audio autoplay> to play the audio automatically when the page loads
+
+    <audio loop> to play the audio in a loop
+
+    <audio muted> to mute the audio by default
+
+-->
+
+<!--
+The source tags for audio can be
+
+type="audio/mpeg" for mp3 files
+
+type="audio/ogg" for ogg files
+
+type="audio/wav" for wav files
+
+type="audio/x-wav" for wav files
+
+type="audio/webm" for webm files
+
+type="audio/aac" for aac files
+
+type="audio/flac" for flac files
+
+type="audio/opus" for opus files
+
+-->
+
+<!--
+We can also use other files to have a fallback for another file like this:
+
+<audio controls autoplay loop muted>
+    <source src="../assets/audios/cut.mp3" type="audio/mpeg">
+    <source src="../assets/audios/cut.ogg" type="audio/ogg">
+    <source src="../assets/audios/cut.wav" type="audio/wav">
+    <source src="../assets/audios/cut.webm" type="audio/webm">
+    <source src="../assets/audios/cut.aac" type="audio/aac">
+    <source src="../assets/audios/cut.flac" type="audio/flac">
+    <source src="../assets/audios/cut.opus" type="audio/opus">
+</audio>
+
+so if one fails to load another one will come up. 
+But it is recommended to use mp3 and ogg files for better compatibility across browsers.
+-->
