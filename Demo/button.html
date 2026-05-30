@@ -1,0 +1,54 @@
+<!-- BUTTONS -->
+
+
+
+
+
+
+
+
+
+
+<a href="https://google.com">
+<button style="font-size: medium; background-color: grey; color: lightblue; border-radius:25px; ">click me</button>
+</a>
+
+<br>
+
+<button onclick="DoSomething()">idi nakhuy</button>
+
+<p  id="random-shit" >Privyet!</p>
+
+<script>
+    function DoSomething() {
+        document.getElementById("random-shit").innerHTML = "Dasvidanya";
+    }
+</script>
+
+<!--
+
+Attributes
+
+font-size: sets the size of the font (obviously) and you can use words such as: small, medium, large, x-small, xx-small, xx-large, x-large.
+also you can use integers as values. like 10px for pixels and 20% for percent and etc
+
+The border-radius changes the roundness of the button.
+
+href = Hypertext REFrence
+
+onclick: execute a function or a code on click.
+
+id: sets an ID for CSS selectors and javascript selectors
+
+Tags
+
+if you want the button to take to to somewhere, a header, a website, another HTML file or etc:
+You need to pair it with <a> tags (anchor)
+
+JavaScript
+
+The tag <script> is for writing javascript code that is an exception to this demos
+This will only be discussed here.
+If you wanna learn more about js go to ./Demo/JavaScript
+
+-->

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+    <form action="random-shit.php" method="post">
+        
+        <label for="random-shit">username</label><br>
+        <input id="random-shit" placeholder="user123456" type="text" required minlength="6" maxlength="12"><br>
+        
+        <label for="passwd"> Password</label><br>
+        <input id="passwd" placeholder="password1234" type="password"><br>
+
+        <label for="email">Email</label><br>
+        <input id="email" type="email" placeholder="example@email.com"><br>
+
+        <label for="phone">phone</label><br>
+        <input id="phone" type="tel" placeholder="123-456-7890" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"><br>
+
+        <label for="bday">Birthdate</label><br>
+        <input type="date" id="bday"><br>
+
+        <label for="quantity">quantity</label><br>
+        <input type="number" id="quantity" min="0" max="99" value="1"><br>
+
+        <!--Radio input-->
+
+        <br><label for="title">Title</label><br>
+        
+        <label for="Ms.">Ms.</label>
+        <input type="radio" name="title" id="Ms."><br>
+        
+        <label for="Mr.">Mr.</label>
+        <input type="radio" name="title" id="Mr."><br>
+
+        <label for="PhD">PhD</label>
+        <input type="radio" name="title" id="PhD"><br>
+
+        <!-- DropDown menu -->
+        <label for="slct">Card</label><br>
+
+        <select id="slct">
+            <option value="credit card">credit card</option>
+            <option value="debit card">debit card</option>
+            <option value="gift card">gift card</option>
+        </select><br>
+
+        <label for="subscribe">subscribe</label>
+        <input type="checkbox" id="subscribe"><br>
+
+        <label for="comment">Comment</label>
+        <textarea id="comment" rows="3" cols="25"></textarea><br>
+
+        <label for="file">File</label>
+        <input type="file" id="file" accept="image/png, image/jpeg">
+
+
+        <br><input type="reset"><br>
+        
+        <input type="submit">
+
+    </form>
+
+
+
+<!--
+To create a form we use the <form> tag
+    in forms, we use <label> and <input> tags
+        NOTE: these are self closing tags.
+    in labels we can put a " for="" " attribute to 
+    link it to a input. so when we click it the cursor
+    automatically goes to the input.
+    
+    setting the type="" attribute is usually useful because
+    it tells the browser what kind of input it is so
+    it does recommended action on the client side.
+
+    the required attr tells the browser that this input is 
+    strictly required. so the browser does not let the user
+    to submit without filling the form.
+
+    the minlength attr tells the browser that the minimum of
+    characters that can be inputted are 6.
+
+    same goes for the maxlength. it tells the browser the 
+    max input.
+
+    but the max and min attr are only for number input.
+
+    the reset input type clears every input box.
+
+    The placeholder puts a faded text in input boxes as examples.
+
+    the value attr sets a default value for a input box
+
+-->
+
+
+</body>
+</html>
