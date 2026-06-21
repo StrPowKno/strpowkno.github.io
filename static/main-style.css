@@ -1,0 +1,372 @@
+/* =========================
+   GLOBAL THEME
+========================= */
+
+.container {
+    display: flex;
+    gap: 20px; /* space between cards */
+}
+
+
+body {
+    background-color: #120C2E; /* very dark purple-blue */
+    color: #E6E6E6;
+    font-family: 'Manrope', sans-serif;
+    margin: 0;
+}
+
+/* Links / Accent text */
+a {
+    color: #06CDFF;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* =========================
+   LAYOUT
+========================= */
+
+main {
+    max-width: 850px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #171036; /* slightly lighter than body */
+    border-radius: 10px;
+}
+
+
+/* ===================
+    Table
+===================== */
+
+#skilltable {
+    width: 100%;
+    max-width: 900px;
+    margin: 1rem auto;
+
+    border-collapse: collapse;
+    overflow: hidden;
+
+    background: #1f1f1f;
+    color: #eaeaea;
+
+    border: 2px solid #44afca;
+    border-radius: 10px;
+}
+
+#skilltable th,
+#skilltable td {
+    padding: 14px 16px;
+    border-bottom: 1px solid rgba(68, 175, 202, 0.3);
+}
+
+#skilltable th {
+    background: #44afca;
+    color: #111;
+    font-weight: bold;
+    border: 3px black;
+}
+
+#skilltable tr:hover {
+    background: rgba(68, 175, 202, 0.08);
+}
+
+/* =========================
+   HEADER + NAV
+========================= */
+
+
+
+#headleft {
+    float: left;
+    margin-right: 20px;
+    display: flow-root;
+    padding: 5px;
+}
+
+header {
+    text-align: center;
+    padding: 25px;
+    background-color: #140F33;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    padding: 10px;
+    background-color: #140F33;
+}
+
+.navbarA {
+    padding: 6px 10px;
+    border-radius: 6px;
+}
+
+.navbarA:hover {
+    background-color: rgba(6, 205, 255, 0.1);
+}
+
+/* =========================
+   CARDS
+========================= */
+
+.card {
+    background-color: #20144A; /* dark purple card */
+    padding: 15px;
+    margin: 15px 0;
+    border-radius: 10px;
+
+    /* soft depth */
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.45);
+}
+
+.small-card {
+    flex: 1;
+    min-width: 250px;
+
+    background-color: #20144A;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+
+.project-card {
+    background-color: #20144A; /* dark purple card */
+    padding: 15px;
+    margin: 15px 0;
+    border-left: 3px solid #06CDFF;
+    border-radius: 10px;
+
+    /* soft depth */
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.45);
+}
+
+/* Optional hover effect */
+.project-card:hover {
+    transform: translateY(-2px);
+    transition: 0.2s ease;
+}
+
+.expriment-card {
+    background-color: #2c1a6e; /* dark purple card */
+    padding: 15px;
+    margin: 15px 0;
+    border-left: 3px solid #44afca;
+    border-radius: 10px;
+
+    /* soft depth */
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.45);
+}
+
+.expriment-card:hover {
+    transform: translateY(-2px);
+    transition: 0.2s ease;
+}
+
+
+
+/* =========================
+   CONTACT / FOOTER
+========================= */
+
+footer {
+    margin-top: 60px;
+    padding: 30px 20px;
+    background-color: #140F33;
+    border-top: 1px solid rgba(6, 205, 255, 0.2);
+    text-align: center;
+}
+
+/* Contact box styling */
+footer address {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 15px 20px;
+
+    background-color: #20144A;
+    border-radius: 10px;
+
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.45);
+    text-align: left;
+    min-width: 260px;
+}
+
+/* Labels like "Github:" */
+footer address {
+    color: #E6E6E6;
+    font-style: normal;
+}
+
+/* Links inside contact */
+footer address a {
+    display: block;
+    margin: 6px 0 12px 0;
+    color: #06CDFF;
+    word-break: break-word;
+}
+
+/* Hover effect */
+footer address a:hover {
+    text-decoration: underline;
+}
+
+/* Optional header styling inside footer */
+footer h3 {
+    color: #06CDFF;
+    margin-bottom: 10px;
+}
+
+/* subtle divider line */
+footer hr {
+    border: none;
+    height: 1px;
+    background: rgba(6, 205, 255, 0.15);
+    margin-bottom: 20px;
+}
+
+
+/* =========================
+   CONTACT LAYOUT
+========================= */
+
+.contact-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap; /* allows mobile stacking */
+    margin-top: 15px;
+}
+
+/* Individual cards */
+.contact-card {
+    background-color: #20144A;
+    padding: 15px 20px;
+    border-radius: 10px;
+
+    min-width: 220px;
+
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.45);
+
+    border-left: 3px solid #06CDFF;
+    transition: 0.2s ease;
+}
+
+/* Hover effect */
+.contact-card:hover {
+    transform: translateY(-3px);
+}
+
+/* Titles inside cards */
+.contact-card h4 {
+    margin: 0 0 10px 0;
+    color: #06CDFF;
+}
+
+/* Links */
+.contact-card a {
+    color: #E6E6E6;
+    word-break: break-word;
+}
+
+.contact-card a:hover {
+    color: #06CDFF;
+}
+
+
+/* =========================
+   SMALL DETAILS
+========================= */
+
+.lil-note {
+    font-size: smaller;
+    opacity: 0.8;
+}
+
+.inline {
+    display: inline;
+}
+
+p, li {
+    line-height: 1.6;
+}
+
+code {
+    font-family: "JetBrains Mono", monospace;
+    color: #06CDFF;
+    background-color: #2b2b2b;
+    border: 1px solid #444;
+    border-radius: 6px;
+    padding: 2px 6px;
+    font-size: 0.95em;
+    line-height: 1.4;
+    white-space: pre-wrap;
+}
+
+
+
+
+/*
+===============
+SPOTIFY WIDGET
+=============== 
+*/
+
+.spotify-widget {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 300px;
+  z-index: 9999;
+
+  background: #121212;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.35);
+  font-family: sans-serif;
+}
+
+.spotify-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  padding: 8px 10px;
+  background: #1f1f1f;
+  font-size: 14px;
+}
+
+.spotify-header button {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.vpn-warning {
+  background: #ffcc00;
+  color: #000;
+  text-align: center;
+  font-size: 12px;
+  padding: 5px;
+  font-weight: bold;
+}
+
+.spotify-body {
+  transition: max-height 0.25s ease, opacity 0.25s ease;
+  overflow: hidden;
+}
+
+.spotify-widget.collapsed .spotify-body {
+  max-height: 0;
+  opacity: 0;
+}
+
+.spotify-widget:not(.collapsed) .spotify-body {
+  max-height: 500px;
+  opacity: 1;
+}

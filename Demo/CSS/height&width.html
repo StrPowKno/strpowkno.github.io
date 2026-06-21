@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>height & width</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        
+
+        .container{
+            background-color: grey;
+            height: 100vh;
+        }
+
+
+        .box {
+            background-color: hsl(0, 0%, 100%);
+            border: 2px solid;
+            padding: 25px;
+            height: auto;
+            width: 50%;
+            float: left;
+            text-align: center;
+
+            min-height: 50%;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+
+        <div class="box">
+            <h2>This is #1</h2>
+        </div>
+
+        <div class="box">
+            <h2>This is #2</h2>
+        </div>
+
+    </div>
+
+</body>
+</html>
+
+
+<!--
+WIDTH & HEIGHT
+
+The width property sets how wide an element is.
+The height property sets how tall an element is.
+
+These properties are usually written in CSS.
+
+Example:
+
+div {
+    width: 300px;
+    height: 200px;
+}
+
+Common units:
+
+px   = Pixels (fixed size)
+%    = Percentage of the parent element's size
+vw   = Viewport width (percentage of screen width)
+vh   = Viewport height (percentage of screen height)
+rem  = Relative to the root font size
+em   = Relative to the current font size
+
+Examples:
+
+width: 50%;
+height: 100px;
+
+width: 100vw;
+height: 100vh;
+
+NOTE:
+If width or height is not specified,
+the browser will often determine the size
+automatically based on the content and element type.
+
+Images:
+
+img {
+    width: 300px;
+    height: auto;
+}
+
+Using height: auto helps keep the image's
+original aspect ratio and prevents stretching.
+
+max-width:
+
+max-width sets the maximum width an element
+can grow to.
+
+Example:
+
+img {
+    max-width: 100%;
+}
+
+This is commonly used to prevent images
+from overflowing their container.
+
+IMPORTANT:
+
+Width and height affect the CONTENT area.
+
+Padding, borders, and margins can make the
+element take up more space than its width
+and height values suggest.
+
+Related properties:
+
+width
+height
+min-width
+max-width
+min-height
+max-height
+-->
+
+
+<!--
+width: 100vw;
+
+means:
+"Take up 100% of the browser window width."
+
+height: 100vh;
+
+means:
+"Take up 100% of the browser window height."
+
+A common pattern for full-screen sections:
+
+.hero {
+    width: 100vw;
+    height: 100vh;
+}
+-->

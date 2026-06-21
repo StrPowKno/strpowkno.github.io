@@ -25,3 +25,4 @@ Screenshots can help here
 
 ## Plans
 - Make the website Responsive
+- Add flask for rendering and backend
