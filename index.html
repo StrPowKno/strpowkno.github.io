@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soashiant | Soashiant's Personal Portfolio Website</title>
+    
+    <!--Stylsheet-->
+    
+    <link rel="stylesheet" href="static/main-style.css">
+    
+    <!--
+    
+    For flask deployment:
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='main-style.css') }}">
+    
+    -->
+    
+    <!-- Fonts -->
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<header>
+    <h1 id="header">Welcome to my website</h1>
+</header>
+
+<nav>
+    <a class="navbarA" href="#home">Home</a>
+    <a class="navbarA" href="#projects">Projects</a>
+    <a class="navbarA" href="blog.html">Blog</a>
+    <a class="navbarA" href="#about">About me</a>
+    <a class="navbarA" href="#contact">Contact me</a>
+</nav>
+
+<hr>
+
+<main>
+
+    <!-- 🏠 HOME SECTION -->
+    <section id="home" class="card" style="display: flow-root;">
+        <div id="headleft">
+        <h1>Hello!</h1>
+        <h2>I'm Phoenix</h2>
+        </div>
+        <div style="text-align: right;">
+        <p>I build software, explore Linux, and create tools for fun.</p> <br>
+        <p>Currently learning C, Flask, Frontend, and systems programming.</p>
+        </div>
+    </section>
+
+    <!-- 👤 ABOUT SECTION -->
+    <section id="about">
+        <div class="things-that-i-x">
+            <h2>What i do:</h2>
+            <div class="container">
+                <div class="small-card">
+                    <h2>Linux</h2>
+                    <p>I mainly code in linux</p>
+                    <p>Because for me its easier to just <code>sudo apt install</code> than press 10 next buttons</p>
+                </div>
+                <div class="small-card">
+                    <h2>Gaming</h2>
+                    <p>I play a lot of games; shooters, rpg, etc</p>
+                    <p>But my favs are warthunder, DDnet Persian, Roblox</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 💻 PROJECTS SECTION -->
+    <section id="projects">
+        <h2>Projects</h2>
+
+        <div class="project-card">
+            <a href="https://github.com/StrPowKno/Formula-center" target="_blank">
+                <h4>Formula Center</h4>
+            </a>
+
+            <p>(This is a school project so it may look a little rushed)</p>
+            <p>it isnt officially finished yet but we arent working on it anymore</p>
+
+            <h4>What is this project:</h4>
+            <p class="lil-note">
+                psst, you can check the official
+                    <a href="https://github.com/strpowkno/Formula-center" target="_blank"><code>README.md</code></a>
+                for that
+            </p>
+
+            <p>Basically, this project contains useful formulas that you would use in math and science</p>
+        </div>
+
+    </section>
+
+    <section>
+        <h2>Quick skill snapshot</h2>
+        <table id="skilltable">
+            <tr>
+                <th width="100">Linux</th>
+                <th width="100">Programming</th>
+                <th width="100">Problem solving</th>
+                <th width="100">Tech Confidence</th>
+                <th width="100">Russian</th>
+                <th width="100">Maker mindset</th>
+            </tr>
+            <tr>
+                <td>Basic Terminal User</td>
+                <td>Multi-language beginner–intermediate builder</td>
+                <td>Reactive troubleshooting</td>
+                <td>High usage comfort, medium depth</td>
+                <td>Beginner (A1-A2)</td>
+                <td>Project-driven, exploratory</td>
+            </tr>
+        </table>
+    </section>
+
+
+    <section>
+        <h2>What im working on rn</h2>
+        <div class="expriment-card">
+            <h4>Python CLI toolkit</h4>
+            <p class="lil-note">Still in progress...</p>
+            <h4>What is this expriment?</h4>
+            <p>Its a defensive/offensive toolkit and system monitoring.</p>
+        </div>
+    </section>
+
+
+    
+</main>
+
+<!-- 📞 CONTACT SECTION -->
+<footer id="contact">
+    <hr>
+    <h3>Ways to contact me:</h3>
+
+    <div class="contact-container">
+
+        <div class="contact-card">
+            <h4>GitHub</h4>
+            <a href="https://github.com/StrPowKno" target="_blank">
+                github.com/StrPowKno
+            </a>
+        </div>
+
+        <div class="contact-card">
+            <h4>Telegram</h4>
+            <a href="https://t.me/StrPowKno" target="_blank">
+                t.me/StrPowKno
+            </a>
+        </div>
+
+    </div>
+</footer>
+
+<div class="spotify-widget" id="spotifyWidget">
+
+  <div class="spotify-header">
+    <span>🎵 Music</span>
+    <button id="toggleBtn">–</button>
+  </div>
+
+  <div class="vpn-warning">
+    ⚠️ Please use VPN
+  </div>
+
+  <div class="spotify-body" id="spotifyBody">
+    <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/playlist/2sF9HI2XGWcP6BOX3XK3xi?utm_source=generator&si=3979504dca814215" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+  </div>
+<script>
+const widget = document.getElementById("spotifyWidget");
+const btn = document.getElementById("toggleBtn");
+
+const saved = localStorage.getItem("spotifyCollapsed");
+if (saved === "true") {
+  widget.classList.add("collapsed");
+  btn.textContent = "+";
+}
+
+btn.addEventListener("click", () => {
+  widget.classList.toggle("collapsed");
+
+  const isCollapsed = widget.classList.contains("collapsed");
+  btn.textContent = isCollapsed ? "+" : "–";
+
+  localStorage.setItem("spotifyCollapsed", isCollapsed);
+});
+</script>
+</div>
+
+
+</body>
+</html>
