@@ -1,97 +1,129 @@
 <!DOCTYPE html>
-
 <html lang="en">
-
 <head>
-
     <meta charset="UTF-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>404 | This page doesnt exist!</title>
-
+    <title>404 | Page not found</title>
+    <link rel="shortcut icon" href="static/favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
 
         body {
-
-            background-color: #120C2E; /* very dark purple-blue */
-
+            background-color: #120C2E;
             color: #E6E6E6;
-
             font-family: 'Manrope', sans-serif;
-
-            margin: 0;
-
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
             text-align: center;
-
+            padding: 20px;
         }
 
-
-
-        h1:first-child {
-
-          font-size: 110px;
-
-          margin: 0;
-
-          opacity: 0.9;
-
-        }
-
-
-
-        a {
-
+        .glitch-number {
+            font-size: clamp(80px, 20vw, 160px);
+            font-weight: 700;
             color: #06CDFF;
+            letter-spacing: -4px;
+            line-height: 1;
+            text-shadow:
+                2px 0 #a855f7,
+                -2px 0 #06CDFF;
+            animation: glitch 3s infinite;
+            user-select: none;
+        }
 
+        @keyframes glitch {
+            0%, 90%, 100% {
+                text-shadow: 2px 0 #a855f7, -2px 0 #06CDFF;
+                transform: none;
+            }
+            92% {
+                text-shadow: -3px 0 #a855f7, 3px 0 #06CDFF;
+                transform: translateX(2px);
+            }
+            94% {
+                text-shadow: 3px 0 #a855f7, -3px 0 #06CDFF;
+                transform: translateX(-2px);
+            }
+            96% {
+                text-shadow: 2px 0 #a855f7, -2px 0 #06CDFF;
+                transform: none;
+            }
+        }
+
+        .card {
+            background-color: #20144A;
+            border-radius: 14px;
+            padding: 40px 50px;
+            margin-top: 30px;
+            max-width: 480px;
+            width: 100%;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.5);
+            border: 1px solid rgba(6, 205, 255, 0.1);
+        }
+
+        h1 {
+            font-size: 1.6rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            color: rgba(230, 230, 230, 0.6);
+            font-size: 0.95rem;
+            margin-bottom: 30px;
+            line-height: 1.6;
+        }
+
+        .home-btn {
+            display: inline-block;
+            background-color: #06CDFF;
+            color: #120C2E;
+            font-family: 'Manrope', sans-serif;
+            font-weight: 700;
+            font-size: 0.95rem;
+            padding: 12px 28px;
+            border-radius: 8px;
             text-decoration: none;
-
+            transition: opacity 0.2s ease, transform 0.2s ease;
         }
 
-
-
-        
-
-        
-
-        a:hover {
-
-            text-decoration: underline;
-
+        .home-btn:hover {
+            opacity: 0.85;
+            transform: translateY(-2px);
+            text-decoration: none;
         }
 
+        .terminal-line {
+            font-family: "Courier New", monospace;
+            font-size: 0.8rem;
+            color: rgba(6, 205, 255, 0.5);
+            margin-top: 24px;
+        }
 
-
-        
-
+        .terminal-line span {
+            color: #a855f7;
+        }
     </style>
-
 </head>
-
 <body>
 
-    <h1 style="text-align: center; font-size: 90px;">404</h1>
+    <div class="glitch-number">404</div>
 
-    <h1>This page doesnt exist!</h1>
-
-    <p>(yet)</p>
-
-
-
-    <h1>Go back to <a href="/">Home</a> ?</h1>
-
-
-
-
-
-    <p style="opacity: 0.7;">
-
-        The server looked for it… but nothing responded.
-
-    </p>
-
-
+    <div class="card">
+        <h1>Page not found</h1>
+        <p class="subtitle">
+            Whatever you were looking for doesn't exist here — yet.<br>
+            Maybe it moved, maybe it never existed, or maybe it's just not built yet.
+        </p>
+        <a class="home-btn" href="index.html">← Back to home</a>
+        <p class="terminal-line"><span>$</span> cd /home && ./start.sh</p>
+    </div>
 
 </body>
-
 </html>

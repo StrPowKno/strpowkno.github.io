@@ -1,0 +1,178 @@
+    /* ── Timeline layout ── */
+        .timeline {
+            position: relative;
+            padding-left: 32px;
+            margin-top: 30px;
+        }
+
+        /* The vertical line */
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 7px;
+            top: 6px;
+            bottom: 0;
+            width: 2px;
+            background: linear-gradient(to bottom, #06CDFF, rgba(6,205,255,0.1));
+        }
+
+        /* Each timeline entry */
+        .timeline-entry {
+            position: relative;
+            margin-bottom: 40px;
+        }
+
+        /* The dot on the timeline */
+        .timeline-entry::before {
+            content: '';
+            position: absolute;
+            left: -28px;
+            top: 10px;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: #06CDFF;
+            border: 2px solid #120C2E;
+            box-shadow: 0 0 6px rgba(6,205,255,0.5);
+        }
+
+        /* Year label */
+        .timeline-year {
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            color: #06CDFF;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+            opacity: 0.8;
+        }
+
+        /* ── Big project card ── */
+        .big-project-card {
+            background-color: #20144A;
+            border-radius: 12px;
+            border-left: 3px solid #06CDFF;
+            padding: 24px 28px;
+            box-shadow: 0 6px 24px rgba(0,0,0,0.45);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .big-project-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+        }
+
+        .project-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 6px;
+        }
+
+        .project-header h3 {
+            margin: 0;
+            font-size: 1.2rem;
+        }
+
+        .project-header h3 a {
+            color: #E6E6E6;
+            text-decoration: none;
+        }
+
+        .project-header h3 a:hover {
+            color: #06CDFF;
+        }
+
+        /* Status badge */
+        .badge {
+            font-size: 0.72rem;
+            font-weight: 700;
+            padding: 3px 10px;
+            border-radius: 20px;
+            letter-spacing: 0.5px;
+            white-space: nowrap;
+        }
+
+        .badge-wip {
+            background-color: rgba(168, 85, 247, 0.15);
+            color: #a855f7;
+            border: 1px solid rgba(168, 85, 247, 0.3);
+        }
+
+        .badge-done {
+            background-color: rgba(6, 205, 255, 0.1);
+            color: #06CDFF;
+            border: 1px solid rgba(6, 205, 255, 0.3);
+        }
+
+        .badge-paused {
+            background-color: rgba(230, 230, 230, 0.08);
+            color: rgba(230,230,230,0.5);
+            border: 1px solid rgba(230,230,230,0.15);
+        }
+
+        .project-desc {
+            font-size: 0.95rem;
+            line-height: 1.7;
+            color: rgba(230,230,230,0.85);
+            margin: 10px 0 16px 0;
+        }
+
+        /* Tech stack tags */
+        .tech-stack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 16px;
+        }
+
+        .tech-tag {
+            font-family: "Courier New", monospace;
+            font-size: 0.78rem;
+            color: #06CDFF;
+            background-color: rgba(6, 205, 255, 0.08);
+            border: 1px solid rgba(6, 205, 255, 0.25);
+            border-radius: 6px;
+            padding: 3px 10px;
+        }
+
+        /* Last updated line */
+        .project-meta {
+            font-size: 0.78rem;
+            color: rgba(230,230,230,0.4);
+            margin-top: 4px;
+        }
+
+        /* GitHub link button */
+        .gh-link {
+            display: inline-block;
+            font-size: 0.85rem;
+            color: #06CDFF;
+            border: 1px solid rgba(6,205,255,0.3);
+            border-radius: 6px;
+            padding: 6px 14px;
+            text-decoration: none;
+            transition: background 0.2s ease;
+        }
+
+        .gh-link:hover {
+            background-color: rgba(6,205,255,0.08);
+            text-decoration: none;
+        }
+
+        /* ── Intro section ── */
+        .page-intro {
+            margin-bottom: 10px;
+        }
+
+        .page-intro h1 {
+            font-size: 2rem;
+            margin-bottom: 8px;
+        }
+
+        .page-intro p {
+            color: rgba(230,230,230,0.6);
+            font-size: 0.95rem;
+        }

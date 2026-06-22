@@ -2,11 +2,19 @@
    GLOBAL THEME
 ========================= */
 
+html { scroll-behavior: smooth; }
+
 .container {
     display: flex;
     gap: 20px; /* space between cards */
+    flex-wrap: wrap ;
 }
 
+h1 { 
+    background: linear-gradient(90deg, #06CDFF, #a855f7);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
 
 body {
     background-color: #120C2E; /* very dark purple-blue */
@@ -23,6 +31,25 @@ a {
 
 a:hover {
     text-decoration: underline;
+}
+
+
+@media (max-width: 600px) {
+    main {
+        margin: 10px;
+        padding: 14px;
+    }
+
+    nav {
+        flex-wrap: wrap;
+        gap: 6px;
+        font-size: 0.9rem;
+    }
+
+    .contact-container {
+        flex-direction: column;
+        align-items: center;
+    }
 }
 
 /* =========================
@@ -78,7 +105,13 @@ main {
    HEADER + NAV
 ========================= */
 
-
+#home {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 16px;
+}
 
 #headleft {
     float: left;
@@ -133,6 +166,11 @@ nav {
     border-radius: 10px;
 }
 
+.small-card:hover {
+    transform: translateY(-2px);
+    transition: 0.2s ease;
+}
+
 
 .project-card {
     background-color: #20144A; /* dark purple card */
@@ -151,8 +189,8 @@ nav {
     transition: 0.2s ease;
 }
 
-.expriment-card {
-    background-color: #2c1a6e; /* dark purple card */
+.experiment-card {
+    background-color: #20144A; /* dark purple card */
     padding: 15px;
     margin: 15px 0;
     border-left: 3px solid #44afca;
@@ -162,7 +200,7 @@ nav {
     box-shadow: 0 6px 18px rgba(0, 0, 0, 0.45);
 }
 
-.expriment-card:hover {
+.experiment-card:hover {
     transform: translateY(-2px);
     transition: 0.2s ease;
 }
@@ -319,7 +357,7 @@ SPOTIFY WIDGET
   position: fixed;
   bottom: 20px;
   right: 20px;
-  width: 300px;
+  width: min(300px, calc(100vw - 40px));
   z-index: 9999;
 
   background: #121212;
